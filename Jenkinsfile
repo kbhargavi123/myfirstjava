@@ -14,6 +14,7 @@ pipeline {
                   maven 'Maven 3.8.3' 
                   sh 'mvn clean install'
                }
+           }
         }
      }
 }
