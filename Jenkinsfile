@@ -8,12 +8,13 @@ pipeline {
                 echo 'checkedout scm'
             }
         }
-        
-        stage{
+        stage('build') {
+            steps {
              tools { 
                   maven 'Maven 3.8.3' 
                   sh 'mvn clean install'
                }
+            }
         }
    }
 }
