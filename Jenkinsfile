@@ -16,7 +16,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "M2_HOME = ${M2_HOME}"
-                sh "${M2_HOME}/bin/mvn clean install"
+                bat "mvn clean install"
              
             }
         }
