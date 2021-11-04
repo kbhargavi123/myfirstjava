@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-     tools { 
-                  maven 'maven_3.8.3' 
+    //  tools { 
+    //               maven 'maven_3.8.3' 
                   
-               }
+    //            }
 
     stages {
         stage('checkout scm') {
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                echo "M2_HOME = ${M2_HOME}"
+                // echo "M2_HOME = ${M2_HOME}"
                 bat "mvn clean install"
              
             }
