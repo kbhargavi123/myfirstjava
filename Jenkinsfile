@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+     tools { 
+                  maven 'maven_3.8.3' 
+                  
+               }
+
     stages {
         stage('checkout scm') {
             steps {
@@ -10,10 +15,8 @@ pipeline {
         }
         stage('build') {
             steps {
-              tools { 
-                  maven 'maven_3.8.3' 
-                  sh 'mvn clean install'
-               }
+                sh 'mvn clean install'
+             
             }
         }
    }
